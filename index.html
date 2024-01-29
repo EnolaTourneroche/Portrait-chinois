@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kalam&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Handlee&display=swap">
+    <link rel="shortcut icon" href="Images/favicon1.ico" />
+    <meta charset="UTF-8">
+    <title>Portrait Chinois d'Enola</title>
+</head>
+
+
+<body>
+<main>
+    <!--Création de ma barre menu-->
+    <div class="navbar">
+        <a href="#accueil">Accueil</a>
+        <a href="#livre">Un Livre</a>
+        <a href="#écrivain">Un Écrivain</a>
+        <a href="#genre">Un Genre Littéraire</a>
+        <a href="#personnage">Un Personnage de Manga</a>
+        <a href="#univers">Un Univers Fantastique</a>
+        <a href="#poème">Un Poème</a>
+        <a href="#saga">Une Saga</a>
+    </div>
+    
+    <div class="container"> <!-- Je crée une div pour ma background image-->
+    
+    <!-- Titre de ma page-->
+    <h1 id="accueil">PORTRAIT CHINOIS D'ENOLA</h1>
+    <div class="présentation">
+        <p>Bonjour !</p>
+        <p>Je m'appelle Enola TOURNEROCHE et suis actuellement en première année de BUT MMI. Dans le cadre d'un projet scolaire, j'ai eu à réaliser ce site qui reflète mon portrait chinois. J'ai choisi le thème de la littérature car je suis une grande passionnée d'écriture !</p>
+        <p>Bonne lecture à tous !</p>
+    </div>
+    
+    <!-- Je créée un carrousel de slides dans une box rectangulaire avec une slide pour chaque analogie. En cliquant dessus cela amène à l'endroit de la page de l'analogie-->
+    <div class="rectangle-box">
+        <div class="slide-container">
+            <div class="slides">
+                <a href="#livre" class="slide" style="background-image: url('./Images/banniere-livre.jpg');">
+                        <h1>Un Livre</h1>
+                </a>
+                <a href="#écrivain" class="slide" style="background-image: url('./Images/banniere-ecrivain.jpg');">
+                    <h1>Un Écrivain</h1>
+                </a>
+                <a href="#genre" class="slide" style="background-image: url('./Images/banniere-genre.jpg');">
+                    <h1>Un Genre littéraire</h1>
+                </a>
+                <a href="#personnage" class="slide" style="background-image: url('./Images/banniere-manga1.jpg');">
+                    <h1>Un Personnage de Manga</h1>
+                </a>
+                <a href="#univers" class="slide" style="background-image: url('./Images/banniere-univers.jpg');">
+                    <h1>Un Univers fantastique</h1>
+                </a>
+                <a href="#poème" class="slide" style="background-image: url('./Images/banniere-poeme.jpeg');">
+                    <h1>Un Poème</h1>
+                </a>
+                <a href="#saga" class="slide" style="background-image: url('./Images/banniere-saga.jpg');">
+                    <h1>Une Saga</h1>
+                </a>
+            </div>
+        </div>
+        <div class="arrow-container">
+            <div class="flèche" onclick="prevSlide()">←</div>
+            <div class="flèche" onclick="nextSlide()">→</div>
+        </div>
+    </div>
+    
+    <div class="liste-analogies" id="liste-analogies"></div>
+    
+    <br>
+    
+    <form>
+        <fieldset>
+            <legend> A votre tour ! </legend>
+            <h2>Tous les champs marqués d'une * sont obligatoires.</h2>
+            <p>
+                <label for="Analogie"> Si j'étais... <span class="star-required">*</span> </label>
+                <input type="text" name="analogie" id="Analogie" placeholder="Par exemple : Un fruit">
+            </p>
+
+            <p>
+                <label for="valeurAnalogie"> Je serais... <span class="star-required">*</span> </label>
+                <input type="text" name="valeur" id="valeurAnalogie" placeholder="Par exemple : Une pomme">
+            </p>
+    
+            <p>
+                <label for="Justification"> Parce que... <span class="star-required">*</span> </label>
+                <input type="text" name="parceque" id="Justification" placeholder="Par exemple : J'aime la compote.">
+            </p>
+    
+            <p>
+                <label for="Image"> Montre-moi ! (lien de ton image)<span class="star-required">*</span> </label>
+                <input type="url" name="url" id="Image" placeholder="URL de ton image !">
+            </p>
+    
+            <p>
+                <label for="Email">Email <span class="star-required">*</span> </label>
+                <input type="email" name="email" id="Email" placeholder="pomme@gmail.com">
+            </p>
+    
+            <p>
+                <input type="button" class="Valider" value="Valider">
+            </p>
+        </fieldset>
+    </form>
+    </div>
+
+    <!--BOUTON POUR RETOURNER EN HAUT-->
+    <a href="#accueil" id="scrollToTopBtn">↑</a>
+    
+    <footer>
+        <button class="popup-mentions" id="show-modal">Mentions légales</button>
+        <div id="overlay">
+            <div id="modal">
+                <div>
+                    <p class="titre-popup">Éditeur :</p>
+                    <p class="texte-popup">Enola TOURNEROCHE, étudiante en BUT MMI à l'Université Gustave Eiffel</p>
+                    <br>
+                    <p class="titre-popup">Hébergeur : 
+                    <p class="texte-popup"> Université Gustave Eiffel - 2 rue Albert Einstein, 77420 Champs-sur-Marne, France - 01 60 95 75 00 - webmaster@univ-eiffel.fr</p>
+                    <br>
+                    <p class="titre-popup">Images :</p>
+                    <p class="texte-popup">La majorité des images utilisées sur ce projet sont libres de droits, pour celles qui ne le sont pas, les éditeurs sont crédités. Ces images ne sont utilisées que dans le cadre de ce projet universitaire.</p>
+                    <br>
+                    <p class="titre-popup">Législation des données à caractère personnel :</p>
+                    <p class="texte-popup">Le formulaire permettant la création d’une analogie personnalisée recueille votre adresse de courriel et votre adresse IP. Pour toute question portant sur la collecte ou le traitement de vos données à caractère personnel par l’UPEM, vous pouvez saisir la personne responsable du traitement des données qui est : Philippe Gambette (philippe.gambette@univ-eiffel.fr). Les fichiers détenus par l'UPEM qui comportent des données à caractère personnel ne seront jamais transmis à des tiers et ne feront jamais l'objet d'une commercialisation.</p>
+                    <br>
+                    <p class="copyright">©2023 Copyright Enola Tourneroche</p>
+                </div>
+                <button id="close-modal">Fermer"</button>
+            </div>
+        </div>
+
+        <button class="popup-crédits" id="show-crédits">Crédits et remerciements</button>
+        <div id="overlay2">
+            <div id="crédits">
+                <div>
+                    <p class="titre-crédits">Crédits :</p>
+                    <p class="texte-crédits">Je crédite Jeremy Tahar pour son code pour l'API. Je le remercie également pour son aide lorsque je rencontrais une difficulté sur un code. </p>
+                    <p class="texte-crédits">Je crédite Bilel Saigh pour son code pour la bannière carrousel.</p>
+                    <br>
+                    <p class="titre-crédits">Remerciements :</p>
+                    <p class="texte-crédits">Je remercie Jeremy Tahar pour son aide lorsque je rencontrais une difficulté sur un code.</p>
+                    <p class="texte-crédits">Je remercie Sarah Jalouali pour ses précieux conseils afin de bien organiser mon HTML CSS.</p>
+                    <p class="texte-crédits">Je remercie également les professeurs, Gaëlle Charpentier, Mathieu Bethet, Philippe Gambette qui m'ont laissé un délai en plus afin de rendre ce projet car j'avais rencontré des difficultés personnelles ne me permettant pas de le rendre dans le temps imparti.</p>
+                
+                </div>
+                <button id="close-crédits">Fermer"</button>
+            </div>
+        </div>
+    </footer>
+</main>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+    
+
+</body>
+</html>

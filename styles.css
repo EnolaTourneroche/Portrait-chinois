@@ -1,0 +1,383 @@
+/*@font-face {
+    font-family: 'Kalam';
+    src: url(https://fonts.googleapis.com/css2?family=Kalam&display=swap) format(woff);
+    font-weight: normal;
+    font-style: normal;
+}*/
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+margin: 0;
+padding: 0;
+padding-top: 1rem; /*Pour que mon site ne soit pas collé à la barre menu*/
+scroll-behavior: smooth;
+}
+
+main {
+    height: 100vh;
+    overflow-y: scroll; 
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+.container{
+    padding-top: 1rem;
+    padding-bottom: 6rem;
+    margin-bottom: 0;
+    background-image: url(Images/bg-papier-froisse.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+/*Je design ma barre menu en appelant l'html que j'ai créé pour ça avec son id navbar*/
+.navbar {
+    background-color: black;
+    overflow: hidden;
+    display:flex; 
+    justify-content:center;
+    position: fixed; /* Ajout de la propriété pour position fixe */
+    top: 0; /* Pour fixer la navbar en haut de la page */
+    width: 100%; /* Pour occuper toute la largeur */
+    z-index: 1000;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: 'Love Ya Like A Sister', sans-serif;
+}
+
+.navbar a:hover {
+    background-color: #C2862A;
+    color: black;
+}
+
+h1 {
+    scroll-snap-align: center;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 50px;
+    margin-bottom: 20px;
+    font-family: 'Love Ya Like A Sister', sans-serif;  
+}
+
+.présentation {
+    margin: auto;
+    max-width: 1000px;
+    text-align: center;
+}
+
+/*je cible seulement le texte*/
+.présentation p {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: 'Indie Flower', sans-serif;
+    font-size: 20px;
+}
+
+.rectangle-box {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    margin-top: 2rem;
+}
+
+/* Style de texte à l'intérieur de la boîte */
+.rectangle-box h1 {
+    color: black;
+    font-family: 'Love Ya Like A Sister', sans-serif;
+    text-shadow: #F5EEE4 10px 0px 20px;
+    text-decoration: none;
+}
+
+.rectangle-box a {
+    text-decoration: none;
+}
+
+.rectangle-box h1:hover {
+    color: #C2862A;
+}
+
+.slide-container {
+    display: flex;
+    width: 100%;
+    height: 300px;
+    transition: transform 0.5s ease-in-out;
+    border: solid 1rem black;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    flex: 0 0 100%;
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: contain;
+    background-repeat: round;
+    background-position: center;
+}
+
+.arrow-container {
+    display: flex;
+    justify-content: center;
+}
+
+.flèche {
+    font-size: 3em;
+    color: black;
+    padding: 10px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.flèche:first-child {
+    left: 10px;
+}
+
+.flèche:last-child {
+    right: 10px;
+}
+
+
+#liste-analogies {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.A1 {
+    height: fit-content;
+    color: white; 
+    text-decoration: dashed ;
+    font-family: 'Love Ya Like A Sister', 'sans-serif';
+    padding-right: 5px;
+    margin-bottom: 1rem;
+}
+
+.A2 {
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.AA {
+    scroll-snap-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 430px;
+    margin-top: 13rem;
+    padding: 1rem;
+    background-color: black;
+    border-radius: 40px ;
+}
+
+/* .AA:hover{
+    animation:float 2s ease-in-out infinite; 
+} */
+
+.A2 p {
+    margin-left: 30px; 
+    font-family: 'Indie Flower', sans-serif;
+    margin-right: 20px;
+}
+
+.A2 img {
+    width: 200px;
+    background-color: white;
+    padding: 12px;
+    border: solid 5px black;
+    margin-bottom: 1rem;
+}
+
+.A2 img:hover{
+    animation:float 2s ease-in-out infinite; 
+} 
+
+form {
+    scroll-snap-align: center;
+    margin-top: 100px;
+}
+
+fieldset {
+    padding: 20px;
+    max-width: 500px;
+    margin: auto;
+    margin-bottom: 0;
+    background-color: black;
+    font-family:'Indie Flower', sans-serif;
+    color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 1px 0 20px black;
+}
+
+fieldset legend{
+    font-family: 'Love Ya Like A Sister', 'sans-serif';
+    color: #C2862A;
+    font-size:30px;
+}
+
+fieldset h2 {
+    font-family: 'Indie Flower', 'sans-serif';
+    font-size: x-small;
+    margin-bottom: 12px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.Valider {
+    color: #C2862A;
+    background-color: #333;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Love Ya Like A Sister', 'sans-serif';
+    margin-top: 10px;
+    border: solid 2px #C2862A;
+}
+
+.Valider:hover {
+    background-color: #C2862A;
+    color: black;
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    height: 500px;
+    text-align: center;
+    z-index: 999999999999;
+    background-color: black;
+    color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+#overlay2 {
+    display: none;
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    height: 320px;
+    text-align: center;
+    z-index: 999999999999;
+    background-color: black;
+    color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+
+footer {
+    scroll-snap-align: center;
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    font-family: 'Indie Flower', 'sans-serif';
+}
+
+footer button {
+    background-color: #ffffff;
+    color: black;
+    font-family: 'Indie Flower', 'sans-serif';
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 20px;
+    padding: 7px;
+}
+
+footer button:hover {
+    background-color: #C2862A;
+    color: black;
+}
+
+#modal p{
+    font-family: 'Indie Flower', sans-serif;
+
+}
+
+#crédits p{
+    font-family: 'Indie Flower', sans-serif;
+} 
+
+/* Code float animation */
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+
+    50% {
+        transform: translatey(-20px); 
+    }
+
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+/* bouton flèche qui retourne tout en haut*/
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 40px;
+    background-color: black;
+    color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    cursor:pointer;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+#scrollToTopBtn:hover {
+    background-color: #C2862A;
+    color: black;
+}
+
+
+
+
+
